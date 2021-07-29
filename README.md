@@ -1,2 +1,2 @@
-# panhwersadaqat.github.io
+#AreejKhalid.github.io
 My Portfolio
