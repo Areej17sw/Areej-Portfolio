@@ -1,0 +1,870 @@
+/*Table of Content
+
+
+    1. Default css
+    2. Preloader css
+    3. Mouse Animation css
+    4. Nav Area css
+    5. Banner Area css
+    6. About Area css
+    7. Services Area css
+    8. Number Area css
+    9. Portfolio Area css
+    10. Testimonial Area css
+    11. Contact Area css
+    12. Brand Area css
+    13. Footer Area css
+
+
+*/
+
+/* CSS VARIABLES */
+
+/*--- 1. Default css starts ---*/
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	width: 100%;
+	height: 100%;
+	font-size: 15px;
+	line-height: 1.7;
+	color: #333333;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #333333;
+	font-weight: 600;
+}
+
+p {
+	letter-spacing: 0;
+	line-height: 1.8;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+a:focus {
+	outline: none;
+	text-decoration: none;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.section-padding {
+	padding: 60px 0;
+}
+
+.section-header {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.section-header h2 {
+	display: inline-block;
+	padding: 5px;
+	margin: 5px 0;
+}
+
+.line-one {
+	height: 1px;
+	width: 140px;
+	background: #FF5454;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+}
+
+/*---Default css ends---*/
+
+/*-------------- 2. Preloader css starts ---------------*/
+
+.loader_bg {
+	position: fixed;
+	z-index: 9999999;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+.loader {
+	border: 0 solid transparent;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: calc(50vh - 75px);
+	left: calc(50vw - 75px);
+}
+
+.loader:before,
+.loader:after {
+	content: '';
+	border: 1em solid #FF5454;
+	border-radius: 50%;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: loader 2s linear infinite;
+	opacity: 0;
+}
+
+.loader:before {
+	animation-delay: 0.5s;
+}
+
+@keyframes loader {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+/*-------------- Preloader css ends ---------------*/
+
+/*--- 3. Mouse animation starts---*/
+
+@-webkit-keyframes scroll-ani {
+	0% {
+		opacity: 1;
+		top: 29%;
+	}
+	15% {
+		opacity: 1;
+		top: 50%;
+	}
+	50% {
+		opacity: 0;
+		top: 50%;
+	}
+	100% {
+		opacity: 0;
+		top: 29%;
+	}
+}
+
+@keyframes scroll-ani {
+	0% {
+		opacity: 1;
+		top: 29%;
+	}
+	15% {
+		opacity: 1;
+		top: 50%;
+	}
+	50% {
+		opacity: 0;
+		top: 50%;
+	}
+	100% {
+		opacity: 0;
+		top: 29%;
+	}
+}
+
+.mouse-scroll {
+	position: absolute;
+	left: 48%;
+	display: inline-block;
+	line-height: 18px;
+	font-size: 13px;
+	font-weight: normal;
+	color: #ffffff;
+	letter-spacing: 2px;
+	margin-top: 10%;
+	text-decoration: none;
+	overflow: hidden;
+}
+
+.mouse-scroll .mouse {
+	position: relative;
+	display: block;
+	width: 35px;
+	height: 60px;
+	margin: 0 auto 20px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 3px solid #ffffff;
+	border-radius: 23px;
+}
+
+.mouse-scroll .mouse .mouse-movement {
+	position: absolute;
+	display: block;
+	top: 29%;
+	left: 50%;
+	width: 8px;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+	background: #ffffff;
+	border-radius: 50%;
+	-webkit-animation: scroll-ani 2s linear infinite;
+	animation: scroll-ani 2s linear infinite;
+}
+
+/*---mouse animation ends---*/
+
+/*---------- 4. Nav area css starts -------------*/
+
+.nav-area {
+	height: 65px;
+}
+
+.nav-area.sticky_navigation {
+	background: #ffffff;
+	height: 80px;
+}
+
+.navbar-nav {
+	margin-top: 15px;
+}
+
+.sticky_navigation {
+	-webkit-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+	-webkit-box-shadow: 0px 3px 4.6px 0.3px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 3px 4.6px 0.3px rgba(0, 0, 0, 0.25);
+}
+
+.sticky_navigation .main-menu {
+	margin-top: 0;
+}
+
+.sticky_navigation .navbar-brand,
+.sticky_navigation .navbar-brand span {
+	color: #000000;
+}
+
+.sticky_navigation .navbar-brand:hover,
+.sticky_navigation .navbar-brand:focus,
+.sticky_navigation .navbar-brand span {
+	color: #FF5454;
+}
+
+.sticky_navigation .nav li a {
+	color: #333333;
+}
+
+.sticky_navigation .nav li.active a {
+	color: #FF5454;
+}
+
+.sticky_navigation .nav li.active::before {
+	border-top: 1px solid #FF5454;
+	content: '';
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+}
+.sticky_navigation .nav li.active::after {
+	border-bottom: 1px solid #FF5454;
+	content: '';
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+}
+
+.sticky_navigation .navbar-brand:hover {
+	color: #ffffff;
+}
+
+.main-menu {
+	-webkit-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+	margin-top: 10px;
+}
+
+.navbar {
+	border: 0;
+	margin-bottom: 0;
+}
+
+.navbar-brand {
+	padding: 25px 0;
+	text-transform: uppercase;
+	font-size: 25px;
+	display: block;
+	color: #ffffff;
+	font-weight: 800;
+}
+
+.logo {
+	padding: 5px;
+	font-size: 32px;
+	letter-spacing: 3px;
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.navbar-right li {
+	display: inline-block;
+	float: none;
+}
+
+.navbar-right li a {
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.navbar-right li.active a {
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.nav > li > a:hover,
+.nav > li > a:active,
+.nav > li > a:focus {
+	background: none;
+}
+
+.navbar-toggle .icon-bar {
+	background: #033d75;
+}
+
+/*---------- Nav area css ends -------------*/
+
+/*----------- 5. Banner area css starts--------------*/
+
+.banner-area {
+	background-image: url(../images/home/home-bg-2.jpg); /*--edit image--*/
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	height: 100%;
+}
+
+.banner-area::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	content: '';
+}
+
+canvas {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.banner-table {
+	display: table;
+	margin: 0;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+.banner-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.welcome-text .intro h2 {
+	color: #fff;
+	font-size: 85px;
+	font-weight: 800;
+	margin-bottom: 10px;
+}
+
+.intro h1 {
+	color: #ffffff;
+	font-size: 60px;
+	font-weight: 200;
+	margin: 0;
+}
+
+.ah-headline.clip .ah-words-wrapper::after {
+	background-color: #fff;
+}
+
+.banner-btn {
+	background: #FF5454;
+	text-decoration: none;
+	padding: 10px 30px;
+	display: inline-block;
+	margin-top: 25px;
+	color: #fff;
+	text-transform: uppercase;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.banner-btn:hover,
+.banner-btn:focus {
+	text-decoration: none;
+	color: #ffffff;
+	background: red;
+}
+
+.welcome-text h3 {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+/*---------Banner area css ends--------------*/
+
+/*---------- 6. About area css starts---------------*/
+
+.about-text-left h2 {
+	font-weight: 700;
+	font-size: 36px;
+	color: #212121;
+	line-height: 1;
+	text-align: right;
+	margin-bottom: 5px;
+}
+
+.about-text-left h3 {
+	color: #212121;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: right;
+	margin-bottom: 18px;
+}
+
+.about-text-left p {
+	text-align: right;
+	font-size: 13px;
+	color: #222;
+	margin-bottom: 50px;
+}
+
+.button {
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	background: #FF5454;
+	padding: 15px;
+	float: right;
+	text-decoration: none;
+}
+
+.button:hover {
+	text-decoration: none;
+	color: #fff;
+	background: red;
+}
+
+.about-text-right {
+	margin-top: 0px;
+}
+
+.about-text-left {
+	margin-top: 0px;
+}
+
+.about-text-left p {
+	text-align: right;
+	font-size: 15px;
+	color: #222;
+	margin-bottom: 50px;
+}
+
+.skillbar {
+	margin-bottom: 15px;
+	position: relative;
+	width: 100%;
+	display: block;
+}
+
+.skillbar .skillbar-title {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.skillbar .skillbar-percent {
+	float: right;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.skillbar-bar {
+	background-color: #FFFFFF;
+	width: 100%;
+	height: 5px;
+}
+
+.skillbar-bar .skillbar-child {
+	width: 0;
+	height: 100%;
+	background-color: #FF5454;
+	-webkit-transition-property: width, background-color;
+	-o-transition-property: width, background-color;
+	transition-property: width, background-color;
+}
+
+/*-------About area css ends--------------*/
+
+/*---------------7. Services area Starts--------------*/
+
+.services-area {
+	background: #f3f4f3;
+}
+
+.services-icon i {
+	font-size: 35px;
+	color: #FF5454;
+}
+
+.single-services:hover i {
+	color: #212121;
+}
+
+.services-content h3 {
+	line-height: 1.9;
+	text-transform: uppercase;
+}
+
+.services-icon {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	padding: 20px;
+}
+
+.single-services {
+	padding: 40px 20px;
+	margin: 0 15px 15px;
+	position: relative;
+	overflow: hidden;
+}
+
+.single-services:hover {
+	-webkit-transition: ease 0.09s;
+	-o-transition: ease 0.09s;
+	transition: ease 0.09s;
+}
+
+.single-services:hover .services-icon {
+	-webkit-transition: ease 0.3s;
+	-o-transition: ease 0.3s;
+	transition: ease 0.3s;
+}
+
+.single-services:hover .services-icon i {
+	-webkit-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: 0.9s;
+	-o-transition: 0.9s;
+	transition: 0.9s;
+}
+
+.single-services:hover {
+	-webkit-transition: 0.9s;
+	-o-transition: 0.9s;
+	transition: 0.9s;
+}
+
+.single-services:hover .services-content {
+	color: #000000;
+}
+
+.single-services:hover .services-content h3 {
+	color: #FF5454;
+}
+
+/*--------------- Services area ends --------------*/
+
+/*-------- 8. Number area starts-----------*/
+
+.number-area {
+	background: #FF5454;
+	color: #fff;
+}
+
+.counter {
+	font-size: 45px;
+	color: #fff;
+}
+
+.single-number i {
+	font-size: 35px;
+}
+
+.single-number p {
+	font-size: 18px;
+}
+
+/*--------Number area ends-----------*/
+
+/*-------Certificate Starts-----------*/
+.more{
+	color: #FF5454;
+}
+
+
+/*------ 11. Contact area starts-------*/
+
+.single-contact i {
+	font-size: 35px;
+	color: #FF5454;
+}
+
+.single-contact i:hover{
+	color: red;
+}
+
+.single-contact .socials i {
+	font-size: 14px;
+	color: #000000;
+}
+
+.single-contact .socials i:hover {
+	font-size: 18px;
+	color: red;
+	transition: font-size 200ms;
+
+}
+
+.socials i:hover {
+	cursor: pointer;
+}
+
+.single-contact {
+	margin-bottom: 50px;
+}
+
+.single-contact h2 {
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.btn.btn-send {
+	background: #FF5454;
+	color: #ffffff;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.contact-right h2 {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.socials {
+	padding-top: 5%;
+}
+
+.socials i {
+	margin: 0 10px;
+}
+
+.single-contact {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	padding: 5%;
+}
+.single-contact:hover{
+	box-shadow: 5px 10px 18px #888888;
+	transition: all 600ms ease-in;
+	transition: all 600ms ease-out;
+	border-radius: 10px;
+}
+
+/*-------- Contact area ends----------- */
+
+
+/*--------------13. Footer area starts -------------*/
+
+.footer-area {
+	background: #232323;
+	color: #ffffff;
+	padding: 30px 0;
+}
+.footer-area a{
+	color: white;
+}
+/*--------------- Footer area ends -------------*/
+
+
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+/*======================================
+//--//-->   PORTFOLIO
+======================================*/
+
+.work-box {
+  margin-bottom: 3rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+.work-box:hover{
+  box-shadow: 5px 10px 18px #888888;
+	transition: all 600ms ease-in;
+	transition: all 600ms ease-out;
+	border-radius: 10px;
+}
+.work-img {
+  display: block;
+  overflow: hidden;
+
+}
+
+.work-img:hover{
+	border-radius: 10px;
+	transition: all 600ms ease-in;
+	transition: all 600ms ease-out;
+}
+
+.work-img img {
+  transition: all 1s;
+}
+
+.work-img img:hover{
+	border-radius: 10px;
+	transition: all 600ms ease-in;
+	transition: all 600ms ease-out;
+}
+
+.work-content {
+  padding: 2rem 3% 1rem 4%;
+
+}
+.w-title{
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.donation{
+	font-size: 12px;
+}
