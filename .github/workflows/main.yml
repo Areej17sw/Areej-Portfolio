@@ -1,0 +1,20 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - master   # Master branch mein push hone par workflow trigger hoga
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install   # Yahan apne project ke dependencies install kar sakte hain
+
+      - name: Deploy to server
+        run: ./deploy.sh   # Yahan apna deployment script ya commands add karein
